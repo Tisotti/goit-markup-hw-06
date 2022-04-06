@@ -295,6 +295,8 @@ transition: fill 250ms var(--cubic);
   width: 528px;
   height: 581px;
 
+  padding: 40px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -303,19 +305,20 @@ transition: fill 250ms var(--cubic);
 }
 
 .close {
-  width: 30px;
-  height: 30px;
+position: absolute;
+right: 8px;
+top: 8px;
 
-  margin-right: -480px;
-  margin-top: 8px;
+width: 30px;
+height: 30px;
 
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
 
-  background-color: var(--primary-white-color);
+background-color: var(--primary-white-color);
 
-  cursor: pointer;
+cursor: pointer;
 }
 
 .btn-close {
@@ -323,6 +326,27 @@ transition: fill 250ms var(--cubic);
   height: 11px;
 
   fill: #000000;
+}
+
+.close:hover .btn-close {
+  fill: var(--accent-color);
+}
+
+.modal-title {
+margin: 0;
+margin-bottom: 12px;
+
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+  
+color: #212121;
+}
+
+.modal-lable {
+display: flex;
 }
 
 /* секция особенности */

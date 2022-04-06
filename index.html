@@ -84,6 +84,40 @@
                 <use href="./images/icons.svg#close"></use>
               </svg>
             </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <form class="modal-form" action="">
+              <label class="modal-lable name" for="name" avtofocus
+                >Имя
+                <input type="text" name="username" id="name" />
+              </label>
+
+              <label class="modal-lable tel" for="tel"
+                >Телефон
+                <input type="tel" name="tel" id="tel" />
+              </label>
+
+              <label class="modal-lable lable" for="mail">
+                Email
+                <input type="email" name="email" id="mail" />
+              </label>
+
+              <label class="modal-lable comment" for="comment">
+                Комментарий
+                <textarea
+                  name="feedback"
+                  rows="5"
+                  placeholder="Введите текст"
+                  id="comment"
+                ></textarea>
+              </label>
+
+              <label class="modal-lable agreement" for="agreement">
+                Соглашаюсь с рассылкой и принимаю
+                <input type="checkbox" name="agreement" id="agreement" />
+              </label>
+
+              <button type="submit">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
