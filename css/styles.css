@@ -326,9 +326,12 @@ cursor: pointer;
   height: 11px;
 
   fill: #000000;
+
+  transition: fill 250ms var(--cubic);
 }
 
-.close:hover .btn-close {
+.close:hover .btn-close,
+.close:focus .btn-close {
   fill: var(--accent-color);
 }
 
@@ -345,8 +348,132 @@ letter-spacing: 0.03em;
 color: #212121;
 }
 
+.modal-form {
+  width: 448px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.form-field:hover input,
+.form-field:focus input {
+ border-color: var(--accent-color);
+}
+
+.form-field label {
+  margin-bottom: 4px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 11px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px; 
+
+  transition: border-color 250ms var(--cubic);
+}
+
 .modal-lable {
+
 display: flex;
+cursor: pointer;
+}
+
+.modal-input {
+  cursor: pointer;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 58%;
+  left: 15px;
+
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+  
+  fill: var(--titel-text-color);
+  transition: fill 250ms var(--cubic);
+}
+
+.form-field:hover .modal-icon,
+.form-field:focus .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-lable:focus ~ .modal-icon {
+  fill: var(--accent-color);
+}
+
+.form-field textarea {
+  transition: border-color 250ms var(--cubic);
+}
+
+.form-field:hover textarea,
+.form-field:focus textarea {
+  border-color: var(--accent-color);
+}
+
+.comment {
+  margin-bottom: 20px;
+
+  resize: none;
+  padding: 12px 16px;
+
+  cursor: pointer;
+}
+
+.form-field textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-link {
+  color: var(--accent-color);
+}
+
+.modal-btn {
+  padding: 10px 32px;
+
+  /* font-family: inherit что бы кнопка наследовало */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  min-width: 200px;
+  text-align: center;
+
+  transition: background-color 250ms var(--cubic);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #188ce8;
 }
 
 /* секция особенности */
@@ -569,12 +696,10 @@ img {
   border-radius: 50%;
 
   transition: background-color 250ms var(--cubic);
-  
 }
 
 .svg-icon {
   transition: fill 250ms var(--cubic);
-  
 }
 
 .team-link-icon:hover,
@@ -915,16 +1040,10 @@ footer {
   color: var(--accent-color);
 }
 
-.footer-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .social {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: #ffffff;
   margin-top: 0;
@@ -975,6 +1094,70 @@ footer {
   width: 20px;
   height: 20px;
 }
+
+/* третий блок футера */
+.subscribe {
+margin-left: 93px;
+width: 570px;
+}
+
+.subscribe-titel {
+line-height: 1.14;
+  text-transform: uppercase;
+  
+  color: var(--primary-white-color);
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: transparent;
+}
+
+.subscribe-btn {
+  position: relative;
+    padding: 10px 29px;
+  
+    /* font-family: inherit что бы кнопка наследовало */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.85;
+    letter-spacing: 0.06em;
+  
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+  
+    border-radius: 4px;
+    border: none;
+  
+    min-width: 200px;
+  
+    transition: background-color 250ms var(--cubic);
+  }
+  
+  .subscribe-btn:hover,
+  .subscribe-btn:focus {
+    background-color: #188ce8;
+  }
+
+  .subscribe-icon {
+    position: absolute;
+
+ 
+
+    top: 15px;
+    right: 28px;
+
+  }
 
 .container {
   width: 1200px;

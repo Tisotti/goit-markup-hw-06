@@ -84,39 +84,69 @@
                 <use href="./images/icons.svg#close"></use>
               </svg>
             </button>
-            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-            <form class="modal-form" action="">
-              <label class="modal-lable name" for="name" avtofocus
-                >Имя
-                <input type="text" name="username" id="name" />
-              </label>
+            <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
 
-              <label class="modal-lable tel" for="tel"
-                >Телефон
-                <input type="tel" name="tel" id="tel" />
-              </label>
+            <form class="modal-form js-speaker-form" action="">
+              <div class="form-field">
+                <label class="modal-lable name" for="name">Имя</label>
 
-              <label class="modal-lable lable" for="mail">
-                Email
-                <input type="email" name="email" id="mail" />
-              </label>
+                <svg class="modal-icon">
+                  <use href="./images/icons.svg#Modal-man"></use>
+                </svg>
 
-              <label class="modal-lable comment" for="comment">
-                Комментарий
+                <input
+                  class="modal-input"
+                  type="text"
+                  name="username"
+                  id="name"
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="modal-lable" for="tel">Телефон </label>
+                <svg class="modal-icon">
+                  <use href="./images/icons.svg#Modal-phone"></use>
+                </svg>
+                <input class="modal-input" type="tel" name="tel" id="tel" />
+              </div>
+
+              <div class="form-field">
+                <label class="modal-lable" for="mail"> Email</label>
+                <svg class="modal-icon">
+                  <use href="./images/icons.svg#Modal-mail"></use>
+                </svg>
+                <input
+                  class="modal-input"
+                  type="email"
+                  name="email"
+                  id="mail"
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="modal-lable" for="comment">Комментарий</label>
                 <textarea
+                  class="comment"
                   name="feedback"
                   rows="5"
                   placeholder="Введите текст"
                   id="comment"
                 ></textarea>
+              </div>
+
+              <input
+                class="modal-input"
+                type="checkbox"
+                name="policy"
+                id="policy"
+                placeholder="Введите текст"
+              />
+              <label class="modal-lable" for="policy"
+                >Соглашаюсь с рассылкой и принимаю
+                <a class="modal-link" href="">Условия договора</a>
               </label>
 
-              <label class="modal-lable agreement" for="agreement">
-                Соглашаюсь с рассылкой и принимаю
-                <input type="checkbox" name="agreement" id="agreement" />
-              </label>
-
-              <button type="submit">Отправить</button>
+              <button class="modal-btn" type="submit">Отправить</button>
             </form>
           </div>
         </div>
@@ -537,6 +567,24 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="subscribe">
+          <b class="subscribe-titel">Подпишитесь на расслылку</b>
+          <label class="subscribe-label" for="email"></label>
+          <input
+            class="subscribe-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+          />
+          <button class="subscribe-btn" type="submit">
+            Подписаться
+            <svg class="subscribe-icon" width="24" height="24">
+              <use href="/images/icons.svg#send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>
