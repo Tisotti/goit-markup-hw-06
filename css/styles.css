@@ -337,7 +337,7 @@ cursor: pointer;
 
 .modal-title {
 margin: 0;
-margin-bottom: 12px;
+margin-bottom: 30px;
 
 font-weight: 700;
 font-size: 20px;
@@ -349,8 +349,6 @@ color: #212121;
 }
 
 .modal-form {
-  width: 448px;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -376,6 +374,8 @@ color: #212121;
 .form-field input {
   margin: 0;
   padding: 11px;
+
+    padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -408,12 +408,9 @@ cursor: pointer;
   transition: fill 250ms var(--cubic);
 }
 
-.form-field:hover .modal-icon,
-.form-field:focus .modal-icon {
-  fill: var(--accent-color);
-}
 
-.modal-lable:focus ~ .modal-icon {
+.modal-input:hover + .modal-icon, 
+.modal-input:focus + .modal-icon {
   fill: var(--accent-color);
 }
 
@@ -443,7 +440,33 @@ cursor: pointer;
   color: rgba(117, 117, 117, 0.5);
 }
 
+.checkbox {
+ position: absolute;
+ appearance: none
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+  
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox:checked + .checkbox-icon {
+background-image: url(/images/icon\ check.svg);
+background-size: contain;
+background-origin: border-box;
+fill: var(--accent-color);
+}
+
+.checkbox-lable {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .modal-link {
+  
   color: var(--accent-color);
 }
 
@@ -1102,10 +1125,17 @@ width: 570px;
 }
 
 .subscribe-titel {
-line-height: 1.14;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  line-height: 1.14;
   text-transform: uppercase;
   
   color: var(--primary-white-color);
+}
+
+.subscribe-btn-span {
+display: flex;
 }
 
 .subscribe-input {
@@ -1123,8 +1153,12 @@ line-height: 1.14;
 }
 
 .subscribe-btn {
-  position: relative;
+    position: relative;
+
+    
+
     padding: 10px 29px;
+    margin-right: 0;
   
     /* font-family: inherit что бы кнопка наследовало */
     font-weight: 700;
@@ -1151,8 +1185,6 @@ line-height: 1.14;
 
   .subscribe-icon {
     position: absolute;
-
- 
 
     top: 15px;
     right: 28px;
