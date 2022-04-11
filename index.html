@@ -128,29 +128,21 @@
                   id="comment"
                 ></textarea>
               </div>
-
-              <label class="modal-lable checkbox-lable" for="policy">
-                <input
-                  class="checkbox"
-                  type="checkbox"
-                  name="policy"
-                  id="policy"
-                  placeholder="Введите текст"
-                />
-                <svg class="checkbox-icon">
-                  <use href="./images/icons.svg#Border"></use>
-                </svg>
-                Соглашаюсь с рассылкой и принимаю<a class="modal-link" href=""
-                  >Условия договора</a
-                >
-              </label>
-              <button class="close" data-modal-close>
-                <svg class="btn-close">
-                  <use href="./images/icons.svg#close"></use>
-                </svg>
-              </button>
-              <button class="modal-btn" type="submit">Отправить</button>
             </form>
+            <label class="modal-lable checkbox-lable">
+              <input class="checkbox" type="checkbox" name="policy" />
+              <svg class="checkbox-icon">
+                <use href="./images/icons.svg#Border"></use>
+              </svg>
+              Соглашаюсь с рассылкой и принимаю
+              <a class="modal-link" href="">Условия договора</a>
+            </label>
+            <button class="close" data-modal-close>
+              <svg class="btn-close">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+            <button class="modal-btn" type="submit">Отправить</button>
           </div>
         </div>
       </section>
@@ -572,7 +564,7 @@
           </ul>
         </div>
 
-        <div class="subscribe">
+        <form class="subscribe">
           <b class="subscribe-titel">Подпишитесь на расслылку</b>
           <label class="subscribe-label" for="email"></label>
           <input
@@ -590,7 +582,7 @@
               </svg>
             </span>
           </button>
-        </div>
+        </form>
       </div>
     </footer>
 
