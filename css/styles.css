@@ -75,12 +75,15 @@ FFFFFF навигация ;*/
   font-size: 26px;
   line-height: 1.19;
 }
+
 .logo-primary {
   color: var(--accent-color);
 }
+
 .logo-secondary {
   color: #000000;
 }
+
 .logo-tertiary {
   color: var(--primary-white-color);
 }
@@ -139,7 +142,7 @@ FFFFFF навигация ;*/
 }
 
 /* дай отступ соседу. при добавлении кнопок не нужно будет редактировать что-то типа last child */
-.nav-address .item + .item {
+.nav-address .item+.item {
   margin-left: 50px;
 }
 
@@ -147,7 +150,7 @@ FFFFFF навигация ;*/
   fill: #757575;
   margin-right: 10px;
 
-transition: fill 250ms var(--cubic);
+  transition: fill 250ms var(--cubic);
 }
 
 .nav-link {
@@ -171,10 +174,10 @@ transition: fill 250ms var(--cubic);
   fill: var(--accent-color);
 }
 
-.nav-contacts{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nav-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   padding-top: 32px;
   padding-bottom: 32px;
@@ -187,7 +190,7 @@ transition: fill 250ms var(--cubic);
 }
 
 .nav-contacts:hover,
-.nav-contacts:focus{
+.nav-contacts:focus {
   color: #2196f3;
 }
 
@@ -206,11 +209,9 @@ transition: fill 250ms var(--cubic);
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
+      rgba(0, 0, 0, 0.4)),
     url(../images/hero_bg.jpg);
   background-repeat: no-repeat;
 }
@@ -276,8 +277,8 @@ transition: fill 250ms var(--cubic);
 
   opacity: 1;
 
-  transition: opacity 250ms var(--cubic), 
-  transform 250ms var(--cubic);
+  transition: opacity 250ms var(--cubic),
+    transform 250ms var(--cubic);
 }
 
 .backdrobe.is-hidden {
@@ -304,24 +305,24 @@ transition: fill 250ms var(--cubic);
 
 }
 
-.close {
-position: absolute;
-right: 8px;
-top: 8px;
+.modal__btn__close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
 
-width: 30px;
-height: 30px;
+  width: 30px;
+  height: 30px;
 
-border-radius: 50%;
-border: 1px solid rgba(0, 0, 0, 0.1);
-box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 
-background-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
 
-cursor: pointer;
+  cursor: pointer;
 }
 
-.btn-close {
+.modal__icon__btn-close {
   width: 11px;
   height: 11px;
 
@@ -330,31 +331,31 @@ cursor: pointer;
   transition: fill 250ms var(--cubic);
 }
 
-.close:hover .btn-close,
-.close:focus .btn-close {
+.modal__btn__close:hover .modal__icon__btn-close,
+.modal__btn__close:focus .modal__icon__btn-close {
   fill: var(--accent-color);
 }
 
-.modal-title {
-margin: 0;
-margin-bottom: 30px;
+.modal__title {
+  margin: 0;
+  margin-bottom: 30px;
 
-font-weight: 700;
-font-size: 20px;
-line-height: 1.15;
-text-align: center;
-letter-spacing: 0.03em;
-  
-color: #212121;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
 }
 
-.modal-form {
+.modal__form {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
 
-.form-field {
+.modal__field {
   position: relative;
 
   display: flex;
@@ -363,44 +364,46 @@ color: #212121;
   margin-bottom: 10px;
 }
 
-.form-field:hover input,
-.form-field:focus input {
- border-color: var(--accent-color);
+.modal__field:hover input,
+.modal__field:focus input {
+  border-color: var(--accent-color);
 }
 
-.form-field label {
+.modal__field label {
   margin-bottom: 4px;
 }
 
-.form-field input {
+.modal__field input {
   margin: 0;
   padding: 11px;
 
-    padding-left: 42px;
+  padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
-  border-radius: 4px; 
+  border-radius: 4px;
 
   transition: border-color 250ms var(--cubic);
 }
 
-.modal-lable {
-display: flex;
-cursor: pointer;
+.modal__lable {
+  display: flex;
+  cursor: pointer;
 
-font-size: 12px;
+  font-size: 12px;
 }
 
-.modal-input {
+.modal__input {
   cursor: pointer;
 }
 
-.modal-input:focus, textarea:focus {
+.modal__input:focus,
+textarea:focus {
   border-color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
-.modal-icon {
+.modal__icon {
   position: absolute;
   top: 58%;
   left: 15px;
@@ -409,27 +412,31 @@ font-size: 12px;
 
   width: 18px;
   height: 18px;
-  
+
   fill: var(--titel-text-color);
-  transition: fill 250ms var(--cubic);
+  transition: fill 250ms var(--cubic), fill 250ms var(--cubic);
 }
 
-
-.modal-input:hover + .modal-icon, 
-.modal-input:focus + .modal-icon {
+.modal__icon:hover {
   fill: var(--accent-color);
 }
 
-.form-field textarea {
+
+.modal__input:hover+.modal__icon,
+.modal__input:focus+.modal__icon {
+  fill: var(--accent-color);
+}
+
+.modal__field textarea {
   transition: border-color 250ms var(--cubic);
 }
 
-.form-field:last-child {
+.modal__field:last-child {
   margin-bottom: 0;
 }
 
-.form-field:hover textarea,
-.form-field:focus textarea {
+.modal__field:hover textarea,
+.modal__field:focus textarea {
   border-color: var(--accent-color);
 }
 
@@ -440,58 +447,58 @@ font-size: 12px;
   cursor: pointer;
 }
 
-.form-field textarea::placeholder {
+.modal__field textarea::placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  
+
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox {
- position: absolute;
- appearance: none
+.modal__checkbox-input {
+  position: absolute;
+  appearance: none
 }
 
-.checkbox-icon {
+.modal__checkbox-icon {
   margin-right: 7px;
 
   width: 16px;
   height: 15px;
 }
 
-.checkbox:focus + .checkbox-icon {
-  background-image: url(./images/icon\ check.svg);
+.modal__checkbox-input:focus+.modal__checkbox-icon {
+  background-image: url(../images/icon\ check.svg);
   background-size: contain;
   background-origin: border-box;
   fill: var(--accent-color);
 }
 
 
-.checkbox:checked + .checkbox-icon {
-background-image: url(./images/icon\ check.svg);
-background-size: contain;
-background-origin: border-box;
-fill: var(--accent-color);
+.modal__checkbox-input:checked+.modal__checkbox-icon {
+  background-image: url(../images/icon\ check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  fill: var(--accent-color);
 }
 
-.checkbox-lable {
+.checkbox__lable {
   display: flex;
   align-items: center;
 
   font-size: 14px;
   line-height: 1.71;
-  
+
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
 
-.modal-link {
+.modal__link {
   margin-left: 5px;
   color: var(--accent-color);
 }
 
-.modal-btn {
+.modal__btn__submit {
   padding: 10px 32px;
 
   /* font-family: inherit что бы кнопка наследовало */
@@ -515,13 +522,14 @@ fill: var(--accent-color);
   transition: background-color 250ms var(--cubic);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__btn__submit:hover,
+.modal__btn__submit:focus {
   background-color: #188ce8;
-} 
+}
 
-.modal-input, .comment {
-  outline:none;
+.modal__input,
+.comment {
+  outline: none;
 }
 
 /* секция особенности */
@@ -664,6 +672,7 @@ img {
 
   background-color: #f5f4fa;
 }
+
 .container-team {
   width: 1200px;
   margin-left: auto;
@@ -705,6 +714,7 @@ img {
   font-size: 16px;
   line-height: 1.18;
 }
+
 .team-position {
   font-size: 16px;
   line-height: 1.18;
@@ -887,9 +897,9 @@ img {
   cursor: pointer;
   border-radius: 4px;
 
-  transition: background-color 250ms var(--cubic), 
-  color 250ms var(--cubic), 
-  box-shadow 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic),
+    color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
 }
 
 .filter-btn:hover,
@@ -898,7 +908,7 @@ img {
   background-color: var(--accent-color);
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+}
 
 .filter-item {
   margin-right: 8px;
@@ -959,20 +969,20 @@ img {
 }
 
 .product-overlay {
-position: absolute;
-top: 0;
-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 
-background-color: rgb(23, 138, 232, 90%);
+  background-color: rgb(23, 138, 232, 90%);
 
-opacity: 0;
+  opacity: 0;
 
-transform: translateY(100%);
-transition: transform 250ms var(--cubic),
-  opacity 250ms var(--cubic);
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic),
+    opacity 250ms var(--cubic);
 }
 
 .product-action {
@@ -981,13 +991,13 @@ transition: transform 250ms var(--cubic),
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   padding: 63px 24px;
 
   top: 0;
   left: 0;
 
-  font-Size: 18px; 
+  font-Size: 18px;
   Line-height: 1.55;
   letter-spacing: 0.03em;
 
@@ -998,7 +1008,7 @@ transition: transform 250ms var(--cubic),
 
 .project-link:hover .product-overlay,
 .project-link:focus .product-overlay {
- transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -1063,6 +1073,7 @@ footer {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 .footer-link {
   display: block;
   text-decoration: none;
@@ -1145,8 +1156,8 @@ footer {
 
 /* третий блок футера */
 .subscribe {
-margin-left: auto;
-/* width: 570px; */
+  margin-left: auto;
+  /* width: 570px; */
 }
 
 .subscribe-titel {
@@ -1155,18 +1166,18 @@ margin-left: auto;
 
   line-height: 1.14;
   text-transform: uppercase;
-  
+
   color: var(--primary-white-color);
 }
 
 .subscribe-btn-span {
-display: flex;
+  display: flex;
 }
 
 .subscribe-input {
   width: 358px;
   height: 50px;
-  
+
   padding: 15px 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1179,42 +1190,42 @@ display: flex;
 }
 
 .subscribe-btn {
-    position: relative;
+  position: relative;
 
-    padding: 10px 29px;
-    margin-right: 0;
-    margin-left: 12px;
-  
-    /* font-family: inherit что бы кнопка наследовало */
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.85;
-    letter-spacing: 0.06em;
-  
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
-    cursor: pointer;
-  
-    border-radius: 4px;
-    border: none;
-  
-    min-width: 200px;
-  
-    transition: background-color 250ms var(--cubic);
-  }
-  
-  .subscribe-btn:hover,
-  .subscribe-btn:focus {
-    background-color: #188ce8;
-  }
+  padding: 10px 29px;
+  margin-right: 0;
+  margin-left: 12px;
 
-  .subscribe-icon {
-    position: absolute;
+  /* font-family: inherit что бы кнопка наследовало */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.06em;
 
-    top: 15px;
-    right: 28px;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
 
-  }
+  border-radius: 4px;
+  border: none;
+
+  min-width: 200px;
+
+  transition: background-color 250ms var(--cubic);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #188ce8;
+}
+
+.subscribe-icon {
+  position: absolute;
+
+  top: 15px;
+  right: 28px;
+
+}
 
 .container {
   width: 1200px;
