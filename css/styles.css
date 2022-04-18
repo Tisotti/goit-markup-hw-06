@@ -263,8 +263,7 @@ FFFFFF навигация ;*/
 .hero-btn:focus {
   background-color: #188ce8;
 }
-
-@import "../utils/flex-placeholder";
+ /* модальное окно */
 
 .backdrobe {
   position: fixed;
@@ -320,19 +319,27 @@ FFFFFF навигация ;*/
 }
 
 .modal__btn__close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      background-color: var(--primary-white-color);
+      cursor: pointer;
 }
 
 .modal__icon__btn-close {
-  width: 11px;
-  height: 11px;
+      width: 11px;
+      height: 11px;
+      fill: #000000;
+      transition: fill 250ms var(--cubic);
+}
 
-  fill: #000000;
-
-  transition: fill 250ms var(--cubic);
+.modal__btn__close:hover .modal__icon__btn-close {
+    fill: var(--accent-color);
 }
 
 .modal__form {
@@ -374,7 +381,7 @@ FFFFFF навигация ;*/
 
   padding-left: 42px;
 
-  border: 1px solid (rgba(33, 33, 33, 0.2));
+  border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 
@@ -389,6 +396,7 @@ FFFFFF навигация ;*/
 }
 
 .modal__input {
+  
   cursor: pointer;
 }
 
@@ -486,11 +494,29 @@ FFFFFF навигация ;*/
 
 .modal__agreement {
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .modal__link {
   margin-left: 5px;
   color: var(--accent-color);
+}
+
+.modal__btn__submit {
+  padding: 10px 32px;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  min-width: 200px;
+  text-align: center;
+  transition: background-color 250ms var(--cubic);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.85;
+        letter-spacing: 0.06em;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
 }
 
 .modal__input,
