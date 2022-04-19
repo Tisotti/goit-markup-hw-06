@@ -79,49 +79,53 @@
         <!-- модалка -->
         <div class="backdrobe is-hidden" data-modal>
           <div class="modal">
-            <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-
-            <form class="modal-form js-speaker-form">
-              <div class="form-field">
-                <label class="modal-lable name" for="name">Имя</label>
+            <b class="modal__title">Оставьте свои данные, мы вам перезвоним</b>
+            <button class="modal__btn__close" data-modal-close>
+              <svg class="modal__icon__btn-close">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+            <form class="modal__form js-speaker-form">
+              <div class="modal__field">
+                <label class="modal__lable" for="name">Имя</label>
                 <input
-                  class="modal-input"
+                  class="modal__input"
                   type="text"
                   name="username"
                   id="name"
                 />
-                <svg class="modal-icon">
+                <svg class="modal__icon">
                   <use href="./images/icons.svg#Modal-man"></use>
                 </svg>
               </div>
 
-              <div class="form-field">
-                <label class="modal-lable" for="tel">Телефон </label>
+              <div class="modal__field">
+                <label class="modal__lable" for="tel">Телефон </label>
 
-                <input class="modal-input" type="tel" name="tel" id="tel" />
-                <svg class="modal-icon">
+                <input class="modal__input" type="tel" name="tel" id="tel" />
+                <svg class="modal__icon">
                   <use href="./images/icons.svg#Modal-phone"></use>
                 </svg>
               </div>
 
-              <div class="form-field">
-                <label class="modal-lable" for="mail"> Email</label>
+              <div class="modal__field">
+                <label class="modal__lable" for="mail"> Email</label>
 
                 <input
-                  class="modal-input"
+                  class="modal__input"
                   type="email"
                   name="email"
                   id="mail"
                 />
-                <svg class="modal-icon">
+                <svg class="modal__icon">
                   <use href="./images/icons.svg#Modal-mail"></use>
                 </svg>
               </div>
 
-              <div class="form-field">
-                <label class="modal-lable" for="comment">Комментарий</label>
+              <div class="modal__field">
+                <label class="modal__lable" for="comment">Комментарий</label>
                 <textarea
-                  class="comment"
+                  class="modal__comment"
                   name="feedback"
                   rows="5"
                   placeholder="Введите текст"
@@ -129,20 +133,24 @@
                 ></textarea>
               </div>
 
-              <label class="modal-lable checkbox-lable">
-                <input class="checkbox" type="checkbox" name="policy" />
-                <svg class="checkbox-icon">
+              <label class="checkbox__lable">
+                <input
+                  class="modal__checkbox-input"
+                  type="checkbox"
+                  name="policy"
+                />
+                <svg class="modal__checkbox-icon">
                   <use href="./images/icons.svg#Border"></use>
                 </svg>
-                Соглашаюсь с рассылкой и принимаю
-                <a class="modal-link" href="">Условия договора</a>
+                <p class="modal__agreement">
+                  Соглашаюсь с рассылкой и принимаю
+                </p>
+                <a class="modal__link" href="">Условия договора</a>
               </label>
-              <button class="close" data-modal-close>
-                <svg class="btn-close">
-                  <use href="./images/icons.svg#close"></use>
-                </svg>
+
+              <button class="modal__btn__submit" type="submit">
+                Отправить
               </button>
-              <button class="modal-btn" type="submit">Отправить</button>
             </form>
           </div>
         </div>
